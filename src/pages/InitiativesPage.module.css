@@ -1,0 +1,18 @@
+.header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}

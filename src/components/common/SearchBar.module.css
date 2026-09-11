@@ -1,0 +1,68 @@
+.form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-white);
+  border-radius: var(--radius-pill);
+  padding: 6px 6px 6px 20px;
+  box-shadow: var(--shadow-lg);
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.icon {
+  color: var(--color-gray-400);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1 1 0%;
+  min-width: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 4px;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.button {
+  border: none;
+  background: var(--color-green-600);
+  color: var(--color-text-inverse);
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.button:hover {
+  background: var(--color-green-700);
+}
+
+.button:focus-visible {
+  outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  .form {
+    flex-wrap: wrap;
+    padding: 6px 6px 6px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .input {
+    padding: 10px 4px;
+  }
+
+  .button {
+    padding: 10px 20px;
+  }
+}

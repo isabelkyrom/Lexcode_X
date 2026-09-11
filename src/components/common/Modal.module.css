@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 17, 40, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.dialog {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: 460px;
+  width: 100%;
+  padding: 32px;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: var(--color-gray-100);
+  color: var(--color-gray-600);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  background: var(--color-gray-200);
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-green-100);
+  color: var(--color-green-700);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.body {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirmButton {
+  border: none;
+  background: var(--color-navy-900);
+  color: var(--color-text-inverse);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+}
+
+.confirmButton:hover {
+  background: var(--color-navy-950);
+}

@@ -1,0 +1,35 @@
+.hero {
+  background: var(--color-navy-900);
+  color: var(--color-white);
+  padding: 72px 0 88px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+.heroText {
+  color: var(--color-text-inverse-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 620px;
+  margin: 0 auto 36px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 52px 0 64px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroText {
+    font-size: 0.95rem;
+  }
+}

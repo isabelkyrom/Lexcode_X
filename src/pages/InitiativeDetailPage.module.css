@@ -1,0 +1,226 @@
+.page {
+  padding: 32px 0 64px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.proponent {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin: 0 0 28px;
+  line-height: 1.25;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cardHeaderTitle {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.percentage {
+  color: var(--color-green-700);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.progressMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.signaturesCount {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.exposition {
+  margin-top: 24px;
+}
+
+.expositionTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.expositionText {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  white-space: pre-line;
+  margin: 0;
+}
+
+.sidebarLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  margin: 0 0 4px;
+}
+
+.sidebarValue {
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+}
+
+.sidebarValue:last-child {
+  margin-bottom: 0;
+}
+
+.statusValue {
+  color: var(--color-green-700);
+  font-weight: 700;
+}
+
+.signatureModuleTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.signatureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: stretch;
+}
+
+.confirmationCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.termsRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.checkbox {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-green-600);
+  flex-shrink: 0;
+}
+
+.termsText {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.termsText a {
+  color: var(--color-green-700);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.confirmationFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.helperText {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.confirmButton {
+  border: none;
+  background: var(--color-green-600);
+  color: var(--color-white);
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+}
+
+.confirmButton:hover:not(:disabled) {
+  background: var(--color-green-700);
+}
+
+.confirmButton:disabled {
+  background: var(--color-gray-300);
+  color: var(--color-gray-500);
+  cursor: not-allowed;
+}
+
+.notFound {
+  padding: 80px 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .signatureGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .confirmationFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .confirmButton {
+    width: 100%;
+  }
+}
