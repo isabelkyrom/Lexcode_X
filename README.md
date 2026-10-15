@@ -1,16 +1,39 @@
-# React + Vite
+# LEXCODE X
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicacion web construida con React, React Router y Vite.
 
-Currently, two official plugins are available:
+## Desarrollo local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requiere Node.js 20.19+ o 22.12+.
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Vite mostrara la URL local en la terminal (normalmente `http://localhost:5173`).
 
-## Expanding the Oxlint configuration
+## Verificacion de produccion
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm run lint
+npm run build
+```
+
+La compilacion genera los archivos estaticos en `dist/`.
+
+## Despliegue en Vercel
+
+1. Sube el repositorio a GitHub, GitLab o Bitbucket.
+2. En Vercel, selecciona **Add New > Project** e importa el repositorio.
+3. Deja el framework como **Vite** y usa estos valores si Vercel no los detecta automaticamente:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+4. Selecciona **Deploy**. Los despliegues posteriores se ejecutaran al actualizar la rama conectada.
+
+`vercel.json` configura el fallback de las rutas de React Router para que las URL internas, como `/iniciativas`, funcionen tambien al abrirlas directamente o al recargar la pagina.
+
+### Variables de entorno
+
+Actualmente la aplicacion usa datos locales de ejemplo y no necesita variables para desplegarse. Si se conecta el backend, configura `VITE_API_URL` en **Project Settings > Environment Variables** con la URL publica del API para los entornos correspondientes. Las variables con prefijo `VITE_` se incluyen en el codigo del navegador; no guardes secretos en ellas.
